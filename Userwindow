@@ -1,0 +1,314 @@
+# -*- coding: utf-8 -*-
+# Form implementation generated from reading ui file 'user_window.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.1
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+import sqlite3
+import time
+from datetime import date
+
+from mainwindow_ import *
+
+
+class Ui_MainWindow_3(object):
+    def Label_Id(self,id):
+        self.user_id=id
+
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(1203, 889)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout.setObjectName("gridLayout")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(706, 7, 101, 41))
+        self.pushButton.setIconSize(QtCore.QSize(50, 30))
+        self.pushButton.setObjectName("pushButton")
+
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+        self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.tabWidget.setFont(font)
+        self.tabWidget.setObjectName("tabWidget")
+        self.tab = QtWidgets.QWidget()
+        self.tab.setObjectName("tab")
+        self.tableWidget_3 = QtWidgets.QTableWidget(self.tab)
+        self.tableWidget_3.setGeometry(QtCore.QRect(0, 0, 1171, 801))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.tableWidget_3.setFont(font)
+        self.tableWidget_3.setObjectName("tableWidget_3")
+        self.tableWidget_3.setColumnCount(8)
+        self.tableWidget_3.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(6, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(7, item)
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_3 = QtWidgets.QWidget()
+        self.tab_3.setObjectName("tab_3")
+        self.tableWidget_4 = QtWidgets.QTableWidget(self.tab_3)
+        self.tableWidget_4.setGeometry(QtCore.QRect(0, 0, 1171, 801))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.tableWidget_4.setFont(font)
+        self.tableWidget_4.setObjectName("tableWidget_4")
+        self.tableWidget_4.setColumnCount(8)
+        self.tableWidget_4.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(6, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(7, item)
+        self.tabWidget.addTab(self.tab_3, "")
+        self.tab_2 = QtWidgets.QWidget()
+        self.tab_2.setObjectName("tab_2")
+        self.tableWidget_5 = QtWidgets.QTableWidget(self.tab_2)
+        self.tableWidget_5.setGeometry(QtCore.QRect(0, 0, 1171, 801))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.tableWidget_5.setFont(font)
+        self.tableWidget_5.setObjectName("tableWidget_5")
+        self.tableWidget_5.setColumnCount(4)
+        self.tableWidget_5.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_5.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_5.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_5.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_5.setHorizontalHeaderItem(3, item)
+        self.tabWidget.addTab(self.tab_2, "")
+        self.gridLayout.addWidget(self.tabWidget, 1, 0, 1, 1)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.retranslateUi(MainWindow)
+        self.tabWidget.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "UserWindow"))
+        self.label.setText(_translate("MainWindow", self.user_id))#
+        item = self.tableWidget_3.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "book id"))
+        item = self.tableWidget_3.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "book name"))
+        item = self.tableWidget_3.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "category"))
+        item = self.tableWidget_3.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "author"))
+        item = self.tableWidget_3.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "publisher"))
+        item = self.tableWidget_3.horizontalHeaderItem(5)
+        item.setText(_translate("MainWindow", "book_price"))
+        item = self.tableWidget_3.horizontalHeaderItem(7)
+        item.setText(_translate("MainWindow", "days"))
+        item = self.tableWidget_3.horizontalHeaderItem(6)
+        item.setText(_translate("MainWindow", "about"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "books on me"))
+        item = self.tableWidget_4.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "book id"))
+        item = self.tableWidget_4.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "book name"))
+        item = self.tableWidget_4.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "category"))
+        item = self.tableWidget_4.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "author"))
+        item = self.tableWidget_4.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "publisher"))
+        item = self.tableWidget_4.horizontalHeaderItem(5)
+        item.setText(_translate("MainWindow", "book_price"))
+        item = self.tableWidget_4.horizontalHeaderItem(7)
+        item.setText(_translate("MainWindow", "days"))
+        item = self.tableWidget_4.horizontalHeaderItem(6)
+        item.setText(_translate("MainWindow", "about"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "books i am read"))
+        item = self.tableWidget_5.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "book id"))
+        item = self.tableWidget_5.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "book name"))
+        item = self.tableWidget_5.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "days"))
+        item = self.tableWidget_5.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "punishment"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "punishment"))
+
+        self.pushButton.setText(_translate("MainWindow", "Terug"))
+
+        self.pushButton.clicked.connect(self.Main)
+
+        ########book_on####################3
+
+        self.baglanti = sqlite3.connect("Database.db")
+        self.cur = self.baglanti.cursor()
+
+        book_on = []
+        total_days = []
+
+        today = time.strftime("%Y.%m.%d", time.localtime())
+
+        self.cur.execute("SELECT Boek_id,Huur_datum,Huur_datum FROM Huur_Ophalen WHERE Gebruiker_id=? AND Retour_datum=''",(int(self.user_id),))
+        data = self.cur.fetchall()
+        # print(data)
+        for i in data:
+            self.cur.execute("SELECT Boek_id,boek_Naam,Categorie,Autheur,Uitgeverij,Boek_Prijs,OverDitBoek FROM Boek WHERE Boek_id=?",(int(i[0]),))
+            data_book = self.cur.fetchall()
+            book_on.append(data_book[0])
+        # print(book_on)
+
+        for i in data:
+            a = date(int(today[:4]), int(today[5:7]), int(today[8:10]))
+            b = date(int(i[1][:4]), int(i[1][5:7]), int(i[1][8:10]))
+            day = (a - b).days
+            total_days.append(day)
+        # print(total_days)
+        total_days = tuple(total_days)
+        for i in range(len(book_on)):
+            book_on[i] += (total_days[i],)
+        # print(book_on)
+
+        self.tableWidget_3.insertRow(0)
+        for row, form in enumerate(book_on):
+            for column, item in enumerate(form):
+                self.tableWidget_3.setItem(row, column, QtWidgets.QTableWidgetItem(str(item)))
+                column += 1
+
+            row_position = self.tableWidget_3.rowCount()
+            self.tableWidget_3.insertRow(row_position)
+
+        ########book_read######################
+
+        self.baglanti_ = sqlite3.connect("Database.db")
+        self.cur_ = self.baglanti_.cursor()
+
+        book_read = []
+        total_days_ = []
+
+        self.cur_.execute("SELECT Boek_id,Huur_datum,Retour_datum FROM Huur_Ophalen WHERE Gebruiker_id=? AND Retour_datum!=''",(int(self.user_id),))
+        data_ = self.cur_.fetchall()
+        # print(data_)
+        for i in data_:
+            self.cur_.execute("SELECT Boek_id,Boek_Naam,Categorie,Autheur,Uitgeverij,Boek_Prijs,OverDitBoek FROM Boek WHERE Boek_id=?",(int(i[0]),))
+            data_book_ = self.cur_.fetchall()
+            book_read.append(data_book_[0])
+        # print(book_read)
+
+        for i in data_:
+            a = date(int(i[2][:4]), int(i[2][5:7]), int(i[2][8:10]))
+            b = date(int(i[1][:4]), int(i[1][5:7]), int(i[1][8:10]))
+            day_ = (a - b).days
+            total_days_.append(day_)
+        # print(total_days_)
+        total_days_ = tuple(total_days_)
+        for i in range(len(book_read)):
+            book_read[i] += (total_days_[i],)
+        # print(book_read)
+
+        self.tableWidget_4.insertRow(0)
+        for row, form in enumerate(book_read):
+            for column, item in enumerate(form):
+                self.tableWidget_4.setItem(row, column, QtWidgets.QTableWidgetItem(str(item)))
+                column += 1
+
+            row_position = self.tableWidget_4.rowCount()
+            self.tableWidget_4.insertRow(row_position)
+
+     #################punishment#######################
+
+        self._baglanti_ = sqlite3.connect("Database.db")
+        self._cur_ = self._baglanti_.cursor()
+
+        book_name = []
+        _total_days_ = []
+
+        self._cur_.execute("SELECT Boek_id,Huur_datum,Retour_datum FROM Huur_Ophalen WHERE Gebruiker_id=? ", (int(self.user_id),))
+        _data_ = self._cur_.fetchall()
+        # print(_data_)
+        for i in _data_:
+            self._cur_.execute("SELECT Huur_Ophalen.Boek_id,Boek.Boek_Naam,Huur_Ophalen.De_strafzaak FROM Boek,Huur_Ophalen ""WHERE Huur_Ophalen.Boek_id=Boek.Boek_id AND Boek.Boek_id=? AND Huur_Ophalen.Gebruiker_id=?",(int(i[0]), int(self.user_id),))
+            _data_book_ = self._cur_.fetchall()
+            book_name.append(_data_book_[0])
+        # print(book_name)
+
+        _today_ = time.strftime("%Y.%m.%d", time.localtime())
+        for i in _data_:
+            if i[2] == "":
+                a = date(int(_today_[:4]), int(_today_[5:7]), int(_today_[8:10]))
+                b = date(int(i[1][:4]), int(i[1][5:7]), int(i[1][8:10]))
+                _day_ = (a - b).days
+                _total_days_.append(_day_)
+
+            else:
+                a = date(int(i[2][:4]), int(i[2][5:7]), int(i[2][8:10]))
+                b = date(int(i[1][:4]), int(i[1][5:7]), int(i[1][8:10]))
+                _day_ = (a - b).days
+                _total_days_.append(_day_)
+
+        # print(_total_days_)
+        _total_days_ = tuple(_total_days_)
+        for i in range(len(book_name)):
+            book_name[i] += (_total_days_[i],)
+        # print(book_name)
+
+        self.tableWidget_5.insertRow(0)
+        for row, form in enumerate(book_name):
+            for column, item in enumerate(form):
+                self.tableWidget_5.setItem(row, column, QtWidgets.QTableWidgetItem(str(item)))
+                column += 1
+
+            row_position = self.tableWidget_5.rowCount()
+            self.tableWidget_5.insertRow(row_position)
+
+
+    def Main(self):
+        self.MainWindow = QtWidgets.QMainWindow()
+        self.ui =Ui_MainWindow()
+        self.ui.setupUi(MainWindow)
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow_3()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
